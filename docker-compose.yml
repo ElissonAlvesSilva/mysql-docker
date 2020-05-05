@@ -6,6 +6,9 @@ services:
     image: mysql:8.0.17
     environment:
      - MYSQL_DATABASE=${DATABASE}
-     - MYSQL_ROOT_PASSWORD=${PASSWORD}
+     - MYSQL_ROOT_PASSWORD=$${ROOT_USER}
+     - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+     - MYSQL_USER=${USERNAME}
+     - MYSQL_PASSWORD=${USER_PASSWORD}
     ports:
       - "3308:3306"
